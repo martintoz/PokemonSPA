@@ -4,6 +4,7 @@ const { Pokemon, Type } = require('../db');
 // Ejemplo: const authRouter = require('./auth.js');
 const fetch = require("node-fetch");
 var express = require('express');
+const { get150 } = require('../utils');
 var router = express.Router();
 // const router = Router();
 
@@ -11,7 +12,23 @@ var router = express.Router();
 // Ejemplo: router.use('/auth', authRouter);
 let idPoke = 898
 
-router.get('/', function (req, res) {
+router.get('/', async function (req, res) {
+  let pokemons;
+  try{
+    pokemons =  await Pokemon.findAll(
+      {attributes: ['id', 'name']}
+      )
+    
+    if(pokemons.length < 1){
+      await get150()
+      }
+    }
+    catch(error){
+      console.log(error);
+      res.status(500).json(error)
+    }
+
+
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private')
   var number = parseInt(req.query.name)
   var name = req.query.name
