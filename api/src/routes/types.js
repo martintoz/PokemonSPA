@@ -5,6 +5,7 @@ const { Type } = require('../db');
 // var {getTypes} = require('../utils/index')
 const fetch = require("node-fetch");
 var express = require('express');
+const { getTypes, get150 } = require('../utils');
 var router = express.Router();
 // const router = Router();
 
@@ -13,16 +14,27 @@ var router = express.Router();
 
 
 router.get('/', async function(req, res){
-  const types = await Type.findAll(
-    {attributes: ['id', 'name']}
-  )
-  // .then(res => res.json())
-  .then(tipos => {
-    var tiposFiltrados = tipos.map(x => x.dataValues)
-    // console.log("tipos", tiposFiltrados, typeof tiposFiltrados)
-    res.send(tiposFiltrados)
-  })
-})
+  let types;
+  try{
+    types =  await Type.findAll(
+      {attributes: ['id', 'name']}
+      )
+    
+    if(types.length < 1){
+      await getTypes();
+      types =  await Type.findAll(
+        {attributes: ['id', 'name']}
+        )
+      }
 
+        let tiposFiltrados = types.map(x => x.dataValues)
+        res.send(tiposFiltrados)
+    }
+    catch(error){
+      console.log(error);
+      res.status(500).json(error)
+    }
+  })
+  
 
 module.exports = router;
