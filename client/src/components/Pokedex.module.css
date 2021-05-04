@@ -1,0 +1,79 @@
+.pokedex {
+    min-height: 87vh;
+    margin-top: 7vh;
+    display: flex;
+    justify-content: center;
+}
+
+.pokedex ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-end: 40px;
+    padding-inline-start: 40px;
+    justify-content: center;
+    width: 80vw;
+    margin-bottom: 0;
+}
+
+.pokedex ul li {
+    min-width: 15vw;
+    margin: 0 0.5vw 1vw 0.5vw;
+}
+.searchbar{
+    display: none;
+}
+.searchbar {
+    grid-area: searchbar;}
+
+.filterType {
+    grid-area: filtertype;
+    place-self: end;
+}
+
+.filterExistent {
+    grid-area: filterexistent;
+    place-self: end;
+}
+
+.sort {
+    grid-area: sort;
+    place-self: start;
+}
+
+.paginado {
+    grid-area: paginado;
+    align-self: end;
+}
+
+.sortFilterContainer {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-areas: 
+    "filtertype . sort" 
+    "filterexistent . sort";
+}
+
+@media (max-width: 1100px) {
+    .sortFilterContainer{
+        grid-template-rows: 3fr 3fr 3fr 4fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "searchbar" 
+        "filtertype" 
+        "filterexistent" 
+        "sort";  
+    }
+    .filterType,.filterExistent, .sort {
+        place-self:center
+    }
+    .paginado{
+        align-self: center;
+    }
+    .searchbar{
+        display:initial;
+        place-self:center
+    }
+}

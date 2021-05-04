@@ -1,0 +1,36 @@
+.fondo{
+    background-image: url("../img/fondo.jpg");
+    height: 94vh; 
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.fondo h1{
+    margin:0 0 0 13vw;
+    padding: 5% 5% 5% 5%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #e1735c;
+    color: #f7de82;
+}
+.fondo h1:hover{
+    background-color: #ab4432;
+    transition: all 0.3s;
+}
+
+@media (max-width: 1300px) {
+    .fondo{
+        background-image: url("../img/fondo2.jpg");
+        background-position: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .fondo h1{
+        margin: 20vh 0 0 0;
+        font-size: 2.5em;
+
+    }
+}

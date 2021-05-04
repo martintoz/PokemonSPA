@@ -1,0 +1,8 @@
+.loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loader img{
+    width:30%;
+}

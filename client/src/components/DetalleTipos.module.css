@@ -1,0 +1,183 @@
+
+.typeImg{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+.fire{
+    background-image: linear-gradient(225deg, #ff867c, #ef5350);
+}
+.fireDb{
+    background-color: #b61827;
+}
+.fireImg{
+    background-image: url('../img/tipos/fire.png');
+}
+.water{
+    background-image: linear-gradient(225deg, #80d6ff, #42a5f5);
+}
+.waterDb{
+    background-color: #0077c2;
+}
+.waterImg{
+    background-image: url('../img/tipos/water.png');
+}
+.grass{
+    background-image: linear-gradient(225deg, #98ee99, #66bb6a);
+}
+.grassDb{
+    background-color: #338a3e;
+}
+.grassImg{
+    background-image: url('../img/tipos/grass.png');
+}
+.normal{
+    background-image: linear-gradient(225deg, #efefef, #bdbdbd);
+}
+.normalDb{
+    background-color: #8d8d8d;
+}
+.normalImg{
+    background-image: url('../img/tipos/normal.png');
+}
+.flying{
+    background-image: linear-gradient(225deg, #efefef, #bdbdbd);
+}
+.flyingDb{
+    background-color: #8d8d8d;
+}
+.flyingImg{
+    background-image: url('../img/tipos/flying.png');
+}
+.fighting{
+    background-image: linear-gradient(225deg, #e67854, #af4a2a);
+}
+.fightingDb{
+    background-color: #7a1b00;
+}
+.fightingImg{
+    background-image: url('../img/tipos/fighting.png');
+}
+.ground{
+    background-image: linear-gradient(225deg, #aa5e44, #77321c);
+    color: #fafafa;
+}
+.ground span{
+    color: #fafafa;
+}
+.groundDb{
+    background-color: #470600;
+}
+.groundImg{
+    background-image: url('../img/tipos/ground.png');
+}
+.poison{
+    background-image: linear-gradient(225deg, #df78ef, #ab47bc);
+}
+.poisonDb{
+    background-color: #790e8b;
+}
+.poisonImg{
+    background-image: url('../img/tipos/poison.png');
+}
+.rock{
+    background-image: linear-gradient(225deg, #a4a4a4, #757575);
+}
+.rockDb{
+    background-color: #494949;
+}
+.rockImg{
+    background-image: url('../img/tipos/rock.png');
+}
+.bug{
+    background-image: linear-gradient(225deg, #cfff95, #9ccc65);
+}
+.bugDb{
+    background-color: #6b9b37;
+}
+.bugImg{
+    background-image: url('../img/tipos/bug.png');
+}
+.ghost{
+    background-image: linear-gradient(225deg, #8559da, #512da8);
+}
+.ghostDb{
+    background-color: #140078;
+}
+.ghostImg{
+    background-image: url('../img/tipos/ghost.png');
+}
+.steel{
+    background-image: linear-gradient(225deg, #a7c0cd, #78909c);
+}
+.steelDb{
+    background-color: #4b636e;
+}
+.steelImg{
+    background-image: url('../img/tipos/steel.png');
+}
+.electric{
+    background-image: linear-gradient(225deg, #ffff8b, #ffee58);
+}
+.electricDb{
+    background-color: #c9bc1f;
+}
+.electricImg{
+    background-image: url('../img/tipos/electric.png');
+}
+.psychic{
+    background-image: linear-gradient(225deg, #df78ef, #ab47bc);
+}
+.psychicDb{
+    background-color: #790e8b;
+}
+.psychicImg{
+    background-image: url('../img/tipos/psychic.png');
+}
+.ice{
+    background-image: linear-gradient(225deg, #6ff9ff, #26c6da);
+}
+.iceDb{
+    background-color: #0095a8;
+}
+.iceImg{
+    background-image: url('../img/tipos/ice.png');
+}
+.dragon{
+    background-image: linear-gradient(225deg, #ffd95b, #ffa726);
+}
+.dragonDb{
+    background-color: #c77800;
+}
+.dragonImg{
+    background-image: url('../img/tipos/dragon.png');
+}
+.dark{
+    background-image: linear-gradient(225deg, #6d6d6d, #424242);
+    color: #fafafa;
+}
+.dark span{
+    color: #fafafa;
+}
+.darkDb{
+    background-color: #1b1b1b;
+}
+.darkImg{
+    background-image: url('../img/tipos/dark.png');
+}
+.fairy{
+    background-image: linear-gradient(225deg, #ff77a9, #ec407a);
+}
+.fairyDb{
+    background-color: #b4004e;
+}
+.fairyImg{
+    background-image: url('../img/tipos/fairy.png');
+}
+@media (max-width: 1300px) {
+    .typeImg{
+        width: 22px;
+        height: 22px;
+    }
+}

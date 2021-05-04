@@ -1,0 +1,61 @@
+.crear {
+    margin-top: 7vh;
+    min-height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+label{
+    margin-bottom: 0.5vw;
+}
+.crear form .tipos{
+    width: 20em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 1vh;
+}
+.crear form .tipos div{
+    place-self: center;
+}
+.crear input{
+    line-height: 20px;
+    text-indent: 5px;
+    margin-bottom: 1vh;
+    width: 20em;
+}
+.crear form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.crear form .stats div{
+    display: flex;
+    flex-direction: column;
+}
+
+.crear form .stats{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.crear form .stats input{
+    width: 5em;
+}
+.crear form .stats div{
+    place-self: start;
+}
+.option{
+    text-transform: capitalize;
+}
+p.danger {
+    color: red;
+    font-size: 10px;
+    margin: 0 1em 1em 0;
+    text-align: right;
+}
+
+input.danger {
+    border: 2px solid red;
+}
+

@@ -1,0 +1,31 @@
+.lupa{
+    height: 1.7em;
+    background-color: #f7de82;
+    border-radius: 100%;
+    padding: 0.7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lupa:hover{
+    background-color: #c2ac53;
+    transition: all 0.3s;
+}
+.form{
+    display: flex;
+    align-items: center;
+}
+.form input{
+    margin:0 0.8vw 0 0.8vw
+}
+@media (max-width: 1100px){
+    .lupa{
+        background-color: #e1735c;
+    }
+    .lupa:hover{
+        background-color: #ab4432;
+    }
+    .form input{
+        width: 90%;
+    }
+}

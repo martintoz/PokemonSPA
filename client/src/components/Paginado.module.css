@@ -1,0 +1,40 @@
+.paginado{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas:
+    "atras numeros adelante";
+}
+.atras, .numeros, .adelante{
+    display: flex;
+    flex-direction: row;
+}
+.atras{
+    grid-area: atras;
+    justify-self:end;
+}
+.numeros{
+    grid-area: numeros;
+    justify-self:center;
+}
+.adelante{
+    grid-area: adelante;
+    justify-self:start;
+}
+.actual{
+    background-color: #f7de82;
+    color: #e1735c;
+}
+.actual:hover:enabled{
+    background-color: #e1735c;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1100px) {
+    .primeros, .ultimos{
+        display: none;
+    }
+}

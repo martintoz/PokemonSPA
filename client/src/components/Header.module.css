@@ -1,0 +1,66 @@
+.header{
+    position: fixed;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "logo boton searchbar";
+    height:6vh;
+    top: 0;
+    right: 0;
+    width: 100%;
+    /* background-color: #c2ac53; AMARILLO OSCURO */
+    /* background-color: #f7de82; AMARILLO */
+    /* background-color: #ab4432; ROJO OSCURO */
+    background-color: #e1735c;
+    /* background-color: #ffa389;ROJO CLARO */
+}
+.header a{
+    color:black;
+    font-weight: bold;
+}
+.header a:hover{
+    color: #f7de82;
+    font-size: 100%;
+    transition: all 0.3s;
+}
+.logo{
+    height: 4vh;
+    grid-area: logo;
+}
+.logo:hover{
+    height: 5vh;
+    transition: all 0.3s;
+}
+.searchbar{
+    justify-self: center;
+    grid-area: searchbar;
+}
+.boton{
+    margin: 0;
+    background-color: #f7de82;
+    border:0.1em solid #f7de82;
+    font-weight: bold;
+    color:#e1735c;
+    text-transform: uppercase;
+    grid-area: boton;
+}
+.boton:hover:enabled{
+    background-color: #c2ac53;
+    border:0.1em solid #c2ac53;
+    color:#e1735c;
+}
+
+
+@media (max-width: 1100px) {
+    .header{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "boton logo ."; 
+    }
+    .searchbar{
+        display: none;
+    }
+}
