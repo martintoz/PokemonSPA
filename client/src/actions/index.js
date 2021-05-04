@@ -11,6 +11,9 @@ export const AZ = "AZ"
 export const FILTER_TYPE = "FILTER_TYPE"
 export const SORT_POKE = "SORT_POKE"
 
+let baseURL= process.env.REACT_APP_API;
+baseURL = baseURL || 'http://localhost:3001';
+
 const chunk = (arr, size) =>
     Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
         arr.slice(i * size, i * size + size)
@@ -18,7 +21,7 @@ const chunk = (arr, size) =>
 
 export function getPokemons() {
     return function (dispatch) {
-        return fetch('/pokemons')
+        return fetch(`${baseURL}/pokemons`)
             .then(response => response.json())
             .then(json => {
                 dispatch({
@@ -138,7 +141,7 @@ export function getNst(current, next, previous, actual, clicked) {
 
 export function getPokemon(url) {
     return function (dispatch) {
-        return fetch('/pokemons/' + url)
+        return fetch(`${baseURL}/pokemons/${url}`)
             .then(response => response.json())
             .then(json => {
                 dispatch({ type: GET_POKEMON, payload: json });
@@ -148,7 +151,7 @@ export function getPokemon(url) {
 
 export function getPokemonDb(name) {
     return function (dispatch) {
-        return fetch('/pokemons/?name=' + name)
+        return fetch(`${baseURL}/pokemons/?name=${name}`)
             .then(response => response.json())
             .then(json => {
                 dispatch({ type: GET_POKEMON_DB, payload: json });
@@ -158,7 +161,7 @@ export function getPokemonDb(name) {
 
 export function getTypes() {
     return function (dispatch) {
-        return fetch('/types')
+        return fetch(`${baseURL}/types`)
             .then(response => response.json())
             .then(json => {
                 var tiposExistentes = json.filter(tipo => tipo.id < 20)
@@ -169,7 +172,7 @@ export function getTypes() {
 
 export function filterType(type) {
     return function (dispatch) {
-        return fetch('/all/' + type)
+        return fetch(`${baseURL}/all/${type}`)
             .then(response => response.json())
             .then(json => {
                 var pokesPoke = {}
@@ -186,7 +189,7 @@ export function filterType(type) {
 
 export function sortPoke(order) {
     return function (dispatch) {
-        return fetch('/all/sort/' + order)
+        return fetch(`${baseURL}/all/sort/${order}`)
             .then(response => response.json())
             .then(json => {
                 var pokesPoke = {}
