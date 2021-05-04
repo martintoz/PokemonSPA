@@ -8,7 +8,9 @@ import thunk from "redux-thunk";
     //     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     //     // applyMiddleware(thunk)
     // );
-const composeEnhacer =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true, traceLimit: 25 }) || compose;
+
+    const composeEnhacer =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 
 export const store = createStore(rootReducer, composeEnhacer(applyMiddleware(thunk)));
 
