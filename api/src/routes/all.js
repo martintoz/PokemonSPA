@@ -10,8 +10,8 @@ var router = express.Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
-getTypes()
-get150()
+// getTypes()
+// get150()
 
 // router.get('/:type', async function (req, res) {
 //   var type = req.params.type
