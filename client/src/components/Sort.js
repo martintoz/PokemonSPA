@@ -19,11 +19,11 @@ function Sort() {
 
     return (
         <div className={SortCss.sort}>
-            <p>Ordenar por:</p>
+            <p>Sort by:</p>
             <button name="az" onClick={() => setOrder("az")}>A-Z</button>
             <button name="za" onClick={() => setOrder("za")}>Z-A</button>
-            <button name="ataqueDesc" onClick={() => setOrder("ataqueDesc")}>Más ataque</button>
-            <button name="ataqueAsc" onClick={() => setOrder("ataqueAsc")}>Menos ataque</button>
+            <button name="ataqueDesc" onClick={() => setOrder("ataqueDesc")}>Most attack</button>
+            <button name="ataqueAsc" onClick={() => setOrder("ataqueAsc")}>Least attack</button>
         </div>
     )
 };
