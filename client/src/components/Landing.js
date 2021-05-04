@@ -13,7 +13,7 @@ function Landing() {
 
     return (
         <div className={LandingCss.fondo}>
-            <Link to='/pokemons'><h1>Ingresar</h1></Link>
+            <Link to='/pokemons'><h1>Enter</h1></Link>
         </div>
     )
 };

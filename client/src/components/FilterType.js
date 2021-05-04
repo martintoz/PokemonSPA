@@ -21,12 +21,12 @@ function FilterType() {
 
     return (
         <form className={FilterTypeCss.form} name="filterType">
-        <label htmlFor="type">Filtrar por tipo:
+        <label htmlFor="type">Filter by type:
         <select name="type" id="type" onChange={handleInputChange}>
                 {state.types.map(tipo => <option key={tipo.name} value={tipo.name}>{tipo.name}</option>)}
             </select>
         </label>
-        <button type="submit">Filtrar</button>
+        <button type="submit">Filter</button>
     </form>
     )
 };

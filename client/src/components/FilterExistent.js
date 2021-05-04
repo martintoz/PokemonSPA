@@ -19,13 +19,13 @@ function FilterExistent() {
 
     return (
         <form className={FilterExistentCss.form} name="filterExistent">
-            <label htmlFor="type">Filtrar por existente:
+            <label htmlFor="type">Filter custom:
         <select name="existent" id="existent" onChange={handleInputChange}>
-                    <option value="t">Solo existentes</option>
-                    <option value="f">Solo creados</option>
+                    <option value="f">Only custom</option>
+                    <option value="t">Only existing</option>
                 </select>
             </label>
-            <button type="submit">Filtrar</button>
+            <button type="submit">Filter</button>
         </form>
     )
 };

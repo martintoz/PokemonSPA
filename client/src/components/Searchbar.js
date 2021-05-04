@@ -21,7 +21,7 @@ function Searchbar() {
     return (
         <div className={SearchbarCss.form}>
             <form name="searchName" >
-                <label htmlFor="type">Buscar por nombre:
+                <label htmlFor="type">Search by name:
         <input type="text" name="search" id="search" onChange={handleInputChange} />
                 </label>
             </form>
