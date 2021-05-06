@@ -37,7 +37,7 @@ export default function Pokedex() {
 
     return (
         <div className={PokedexCss.pokedex}>
-            {!state.pokemons ? <Loader /> :
+            {state.pokemons.length < 1 && <Loader />}{state.pokemons.length > 0 &&
                 <div>
                     <div className={PokedexCss.sortFilterContainer}>
                         <div className={PokedexCss.searchbar}><Searchbar /></div>
@@ -46,7 +46,7 @@ export default function Pokedex() {
                         <div className={PokedexCss.sort} ><Sort /></div>
                     </div>
                         <div className={PokedexCss.paginado} ><Paginado /></div>
-                    <ul>
+                    <ul className={PokedexCss.pokemons}>
                         {state.pokemons.map(poke => <li key={poke.name}><Pokemon name={poke.name} url={poke.url} /></li>)}
                     </ul>
                     <Paginado />

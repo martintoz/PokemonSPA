@@ -22,7 +22,8 @@ function Header() {
     }, [])
     return (
         <div className={HeaderCss.header}>
-            <Link to={'/pokemons/crear'}><button className={HeaderCss.boton} name="crear">Create Pokémon</button></Link>
+            {/* <Link to={'/pokemons/crear'}><button className={HeaderCss.boton} name="crear">Create Pokémon</button></Link> */}
+            <div></div>
             <a href='/pokemons'><img className={HeaderCss.logo} alt="pokemon" src={logo} name="logo" /></a>
             <div className={HeaderCss.searchbar}><Searchbar  /></div>
         </div>

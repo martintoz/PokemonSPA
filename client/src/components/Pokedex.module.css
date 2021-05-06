@@ -4,7 +4,9 @@
     display: flex;
     justify-content: center;
 }
-
+.pokemons{
+    min-height: 50vh;
+}
 .pokedex ul {
     list-style: none;
     display: flex;
